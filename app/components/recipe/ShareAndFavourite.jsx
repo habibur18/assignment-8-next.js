@@ -2,13 +2,39 @@
 
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+  EmailIcon,
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  LineIcon,
+  LineShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  ViberIcon,
+  ViberShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from "react-share";
 
 export default function ShareAndFavourite({ _id }) {
   const { auth } = useAuth();
   const [liked, setLiked] = useState(false);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+  const [active, setActive] = useState(false);
+  const [shareUrl, setShareUrl] = useState(""); // Initialize state for shareUrl
+  const dropdownRef = useRef(null);
+
+  // Set shareUrl after component mounts
+  useEffect(() => {
+    setShareUrl(`${window.location.origin}/recipe/${_id}`);
+  }, [_id]);
 
   // Fetch user's liked status for the current item
   useEffect(() => {
@@ -45,7 +71,7 @@ export default function ShareAndFavourite({ _id }) {
         { method: "PATCH" }
       );
       const data = await res.json();
-      console.log(data); // Log the response or handle the result as needed
+      console.log(data);
     } catch (error) {
       console.error("Failed to toggle like:", error);
       setLiked((prev) => !prev); // Revert UI state if the request fails
@@ -53,6 +79,20 @@ export default function ShareAndFavourite({ _id }) {
       setLoading(false);
     }
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setActive(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="flex gap-4 justify-end">
@@ -103,7 +143,49 @@ export default function ShareAndFavourite({ _id }) {
         )}
         <span>Favourite</span>
       </div>
-      <div className="flex gap-2 text-gray-600 cursor-pointer hover:text-[#0E79F6]">
+      <div
+        ref={dropdownRef}
+        onClick={() => setActive((prev) => !prev)}
+        className="relative flex gap-2 text-gray-600 cursor-pointer hover:text-[#0E79F6]"
+      >
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className={`${
+            active ? "block" : "hidden"
+          } absolute top-10 right-20 opacity-50 w-full h-full z-10 flex justify-center items-center gap-5`}
+        >
+          <EmailShareButton url={shareUrl}>
+            <EmailIcon size={24} round />
+          </EmailShareButton>
+
+          <WhatsappShareButton url={shareUrl}>
+            <WhatsappIcon size={24} round />
+          </WhatsappShareButton>
+
+          <FacebookShareButton url={shareUrl}>
+            <FacebookIcon size={24} round />
+          </FacebookShareButton>
+
+          <TwitterShareButton url={shareUrl}>
+            <TwitterIcon size={24} round />
+          </TwitterShareButton>
+
+          <LinkedinShareButton url={shareUrl}>
+            <LinkedinIcon size={24} round />
+          </LinkedinShareButton>
+
+          <TelegramShareButton url={shareUrl}>
+            <TelegramIcon size={24} round />
+          </TelegramShareButton>
+
+          <ViberShareButton url={shareUrl}>
+            <ViberIcon size={24} round />
+          </ViberShareButton>
+
+          <LineShareButton url={shareUrl}>
+            <LineIcon size={24} round />
+          </LineShareButton>
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={24}
