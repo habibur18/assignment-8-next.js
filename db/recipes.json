@@ -5,18 +5,20 @@
     "author": "John Doe",
     "activeTime": "20 mins",
     "totalTime": "1 hour",
-    "thumbnail": "https://source.unsplash.com/-YHSwy6uqvk/300x160",
+    "thumbnail": "https://cdn.pixabay.com/photo/2023/09/05/12/44/mug-8235059_1280.jpg",
     "image": "https://source.unsplash.com/random/800x600?recipe",
     "category": "Breakfast & Brunch",
     "serves": 0,
     "rating": 3,
-    "steps": ["Preheat the oven to 350°F (175°C).",
+    "steps": [
+      "Preheat the oven to 350°F (175°C).",
       "Prepare the chocolate cake batter according to the package instructions.",
       "Grease individual ramekins and fill them halfway with the cake batter.",
       "Place a piece of chocolate in the center of each ramekin.",
       "Cover the chocolate with more cake batter until the ramekins are three-quarters full.",
       "Bake for 12-15 minutes, or until the edges are set but the center is still slightly jiggly.",
-      "Remove from the oven and let cool for a few minutes."]
+      "Remove from the oven and let cool for a few minutes."
+    ]
   },
   {
     "name": "Sunrise Bites Kitchen",
@@ -29,13 +31,15 @@
     "category": "Breakfast & Brunch",
     "serves": 3,
     "rating": 5,
-    "steps": ["Preheat the oven to 350°F (175°C).",
+    "steps": [
+      "Preheat the oven to 350°F (175°C).",
       "Prepare the chocolate cake batter according to the package instructions.",
       "Grease individual ramekins and fill them halfway with the cake batter.",
       "Place a piece of chocolate in the center of each ramekin.",
       "Cover the chocolate with more cake batter until the ramekins are three-quarters full.",
       "Bake for 12-15 minutes, or until the edges are set but the center is still slightly jiggly.",
-      "Remove from the oven and let cool for a few minutes."]
+      "Remove from the oven and let cool for a few minutes."
+    ]
   },
   {
     "name": "Brunch Haven Delights",
@@ -48,13 +52,15 @@
     "category": "Breakfast & Brunch",
     "serves": 2,
     "rating": 4,
-    "steps": ["Preheat the oven to 350°F (175°C).",
+    "steps": [
+      "Preheat the oven to 350°F (175°C).",
       "Prepare the chocolate cake batter according to the package instructions.",
       "Grease individual ramekins and fill them halfway with the cake batter.",
       "Place a piece of chocolate in the center of each ramekin.",
       "Cover the chocolate with more cake batter until the ramekins are three-quarters full.",
       "Bake for 12-15 minutes, or until the edges are set but the center is still slightly jiggly.",
-      "Remove from the oven and let cool for a few minutes."]
+      "Remove from the oven and let cool for a few minutes."
+    ]
   },
   {
     "name": "Rise & Dine Eatery",
@@ -67,13 +73,15 @@
     "category": "Breakfast & Brunch",
     "serves": 6,
     "rating": 1,
-    "steps": ["Preheat the oven to 350°F (175°C).",
+    "steps": [
+      "Preheat the oven to 350°F (175°C).",
       "Prepare the chocolate cake batter according to the package instructions.",
       "Grease individual ramekins and fill them halfway with the cake batter.",
       "Place a piece of chocolate in the center of each ramekin.",
       "Cover the chocolate with more cake batter until the ramekins are three-quarters full.",
       "Bake for 12-15 minutes, or until the edges are set but the center is still slightly jiggly.",
-      "Remove from the oven and let cool for a few minutes."]
+      "Remove from the oven and let cool for a few minutes."
+    ]
   },
   {
     "name": "Breakfast Oasis Junction",
@@ -86,13 +94,15 @@
     "category": "Breakfast & Brunch",
     "serves": 0,
     "rating": 3,
-    "steps": ["Preheat the oven to 350°F (175°C).",
+    "steps": [
+      "Preheat the oven to 350°F (175°C).",
       "Prepare the chocolate cake batter according to the package instructions.",
       "Grease individual ramekins and fill them halfway with the cake batter.",
       "Place a piece of chocolate in the center of each ramekin.",
       "Cover the chocolate with more cake batter until the ramekins are three-quarters full.",
       "Bake for 12-15 minutes, or until the edges are set but the center is still slightly jiggly.",
-      "Remove from the oven and let cool for a few minutes."]
+      "Remove from the oven and let cool for a few minutes."
+    ]
   },
   {
     "name": "Chocolate Lava Cake",
@@ -215,7 +225,7 @@
     "author": "Michael Johnson",
     "activeTime": "25 mins",
     "totalTime": "6 hours",
-    "thumbnail": "https://source.unsplash.com/-YHSwy6uqvk/300x160",
+    "thumbnail": "https://cdn.pixabay.com/photo/2023/09/05/12/44/mug-8235059_1280.jpg",
     "image": "https://source.unsplash.com/random/800x600?recipe",
     "category": "Dessert",
     "serves": 8,

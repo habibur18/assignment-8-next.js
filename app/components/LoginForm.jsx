@@ -1,5 +1,6 @@
 "use client";
 import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 export default function LoginForm() {
@@ -7,7 +8,7 @@ export default function LoginForm() {
   const [login, setLogin] = useState({});
   const [error, setError] = useState(null);
   const ref = React.useRef(null);
-
+  const router = useRouter();
   const handleChange = (e) => {
     setLogin({
       ...login,
@@ -34,6 +35,8 @@ export default function LoginForm() {
       setAuth(data);
       setError(null);
       ref.current.reset();
+
+      router.push("/");
     }
   };
   return (

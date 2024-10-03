@@ -1,6 +1,7 @@
 import AuthContextProvider from "@/providers/AuthContextProvider";
 import connectMongo from "@/services/connectMongo";
 import localFont from "next/font/local";
+import Navbar from "./components/Navbar";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -26,7 +27,10 @@ export default async function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AuthContextProvider>{children}</AuthContextProvider>
+        <AuthContextProvider>
+          <Navbar />
+          <main>{children}</main>
+        </AuthContextProvider>
       </body>
     </html>
   );
